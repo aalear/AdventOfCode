@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Adam Lear",
+    "classifications": ["AdventOfCode"],
+    "identity": "aalear.AdventOfCode",
+    "name": "Advent of Code C# Solution Template",
+    "shortName": "AoC",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "NewDay",
+    "preferNameDirectory": true
+}
