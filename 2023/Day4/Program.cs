@@ -18,7 +18,7 @@ int GetCardId(string ticket) => int.Parse(Regex.Match(ticket, @"Card\s+(\d+):").
 int GetOverlapCount(string ticket)
 {
     var data = ticket[(ticket.IndexOf(':') + 1)..].Split('|');
-    var winningNumbers = data[0].Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse);
-    var ticketNumbers = data[1].Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse);
+    var winningNumbers = data[0].Split(' ', StringSplitOptions.RemoveEmptyEntries);
+    var ticketNumbers = data[1].Split(' ', StringSplitOptions.RemoveEmptyEntries);
     return winningNumbers.Intersect(ticketNumbers).Count();
 }
