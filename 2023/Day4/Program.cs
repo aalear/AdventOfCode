@@ -5,18 +5,14 @@ var input = File.ReadAllLines("input.txt").ToList();
 // Part 1
 Console.WriteLine($"Part 1: {input.Sum(i => (int)Math.Pow(2, GetOverlapCount(i) - 1))}");
 
-// Part 2: it's quite slow, but we got there
-for (var i = 0; i < input.Count; i++)
-{
-    var line = input[i];
-    var overlapCount = GetOverlapCount(line);
-    if (overlapCount > 0)
-    {
-        var gameId = int.Parse(Regex.Match(line, @"Card\s+(\d+):").Groups[1].Value);
-        input.AddRange(input.Skip(gameId).Take(overlapCount));
-    }
-}
-Console.WriteLine($"Part 2: {input.Count}");
+// Part 2
+Console.WriteLine($"Part 2: {input.Sum(ProcessTicket)}");
+
+int ProcessTicket(string ticket) => input.Skip(GetCardId(ticket))
+                                         .Take(GetOverlapCount(ticket))
+                                         .Sum(ProcessTicket) + 1;
+
+int GetCardId(string ticket) => int.Parse(Regex.Match(ticket, @"Card\s+(\d+):").Groups[1].Value);
 
 // Shared
 int GetOverlapCount(string ticket)
