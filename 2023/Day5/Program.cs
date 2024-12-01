@@ -31,6 +31,14 @@ for(var i = 2; i < input.Length; i++)
 // Part 1
 Console.WriteLine($"Part 1: {seeds.Min(GetLocation)}");
 
+// Part 2
+// Something... about range overlaps here. We don't need to process the whole seed range, for example, if we know
+// it fits entirely into one mapping range.
+// Ranges in the input can't overlap. We also know that if a range doesn't fit into another range, the numbers outside
+// will simply be the same as they are in the input.
+// 
+// If a range of seeds is contained exactly in a mapping range, we don't need to check every seed in that range.
+
 // Shared
 int Map(ICollection<Mapping> map, int startIndex)
 {
