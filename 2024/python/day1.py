@@ -1,4 +1,4 @@
-with open('../inputs/day1.txt', 'r') as f:
+with open('../inputs/Day1.txt', 'r') as f:
     data = [list(map(int, filter(None, line.split()))) for line in f]
 
 left, right = zip(*data)

@@ -1,1 +1,1 @@
-﻿var input = File.ReadAllLines("input.txt");
+﻿var input = File.ReadAllLines("../../NewDay.txt");

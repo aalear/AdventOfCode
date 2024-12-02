@@ -13,4 +13,10 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="..\..\inputs\Day2.txt">
+      <Link>Day2.txt</Link>
+    </Content>
+  </ItemGroup>
+
 </Project>
