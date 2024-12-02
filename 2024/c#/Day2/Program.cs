@@ -1,4 +1,4 @@
-﻿var reports = File.ReadAllLines("input.txt")
+﻿var reports = File.ReadAllLines("../../inputs/day2.txt")
     .Select(line => line.Split(' ').Select(int.Parse).ToArray())
     .ToList();
 

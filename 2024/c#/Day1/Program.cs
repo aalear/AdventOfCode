@@ -1,4 +1,4 @@
-﻿var lists = File.ReadAllLines("input.txt")
+﻿var lists = File.ReadAllLines("../../inputs/day1.txt")
     .Select(line => line.Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray())
     .Aggregate((Left: new List<int>(), Right: new List<int>()), (acc, vals) =>
     {
