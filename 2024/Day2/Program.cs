@@ -2,17 +2,13 @@
     .Select(line => line.Split(' ').Select(int.Parse).ToArray())
     .ToList();
 
-var safePart1 = reports.Count(r =>
-{
-    var diffs = Enumerable.Range(1, r.Length - 1).Select(i => r[i] - r[i - 1]).ToList();
-    return IsSafe(diffs);
-});
-
+var safePart1 = 0;
 var safePart2 = reports.Count(r =>
 {
     var diffs = Enumerable.Range(1, r.Length - 1).Select(i => r[i] - r[i - 1]).ToList();
     if (IsSafe(diffs))
     {
+        safePart1++;
         return true;
     }
 
