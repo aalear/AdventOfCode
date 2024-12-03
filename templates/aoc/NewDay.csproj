@@ -11,6 +11,7 @@
   <ItemGroup>
     <Content Include="..\..\inputs\NewDay.txt">
       <Link>NewDay.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
